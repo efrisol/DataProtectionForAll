@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotizador Protección de Datos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Consultoría en Protección de Datos</h1>
+    <p>Calcula el costo estimado de tus servicios según tus endpoints.</p>
+
+    <form id="quoteForm">
+      <label for="endpoints">Cantidad de endpoints a respaldar:</label>
+      <input type="number" id="endpoints" name="endpoints" min="1" required>
+
+      <button type="submit">Calcular Cotización</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
