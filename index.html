@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cotizador | Protección de Datos</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- EmailJS (solo si quieres enviar correos; deja el script y pon tus IDs en script.js) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Consultoría en Protección de Datos</h1>
+      <p class="tagline">Cotiza en segundos y contáctame por el canal que prefieras.</p>
+    </div>
+  </header>
+
+  <main class="wrap grid">
+    <section class="card">
+      <h2>Obtén tu cotización</h2>
+      <p>Calculamos el precio estimado según la cantidad de <strong>endpoints</strong> a respaldar.</p>
+
+      <form id="quoteForm" novalidate>
+        <div class="field">
+          <label for="name">Nombre completo</label>
+          <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="tu@email.com" required>
+        </div>
+
+        <div class="field">
+          <label for="company">Empresa (opcional)</label>
+          <input id="company" name="company" type="text" placeholder="Nombre de empresa">
+        </div>
+
+        <div class="field">
+          <label for="endpoints">Cantidad de endpoints a respaldar</label>
+          <input id="endpoints" name="endpoints" type="number" min="1" step="1" placeholder="Ej: 12" required>
+          <small class="hint">Precios: 1–5: €100 · 6–10: €180 · 11–20: €300 · &gt;20: €300 + €20 por endpoint extra</small>
+        </div>
+
+        <div class="field checkbox">
+          <input id="consulting" type="checkbox">
+          <label for="consulting">Solicitar servicio de consultoría</label>
+        </div>
+
+        <div class="field checkbox">
+          <input id="consent" type="checkbox" required>
+          <label for="consent">He leído y acepto la política de privacidad y el tratamiento de mis datos para contactarme.</label>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="btnCalc" class="btn primary">Calcular</button>
+          <button type="button" id="btnSendQuote" class="btn" disabled>Enviar cotización por email</button>
+          <button type="button" id="btnWhats" class="btn success">Hablar por WhatsApp</button>
+        </div>
+      </form>
+    </section>
+
+    <aside class="card">
+      <h3>Resumen</h3>
+      <div id="summary">
+        <p>Completa el formulario y pulsa <strong>Calcular</strong>.</p>
+      </div>
+      <hr/>
+      <h3>¿Qué incluye?</h3>
+      <ul class="bullets">
+        <li>Revisión de inventario de datos y flujos</li>
+        <li>Evaluación de riesgos por endpoint</li>
+        <li>Recomendaciones de medidas técnicas y organizativas</li>
+        <li>Soporte para cumplimiento LOPDGDD / RGPD</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© <span id="year"></span> Consultoría en Protección de Datos. Todos los derechos reservados.</small>
+      <a href="#" id="privacyLink">Política de privacidad</a>
+    </div>
+  </footer>
+
+  <!-- Modal de confirmación -->
+  <dialog id="modal">
+    <div class="modal-content">
+      <h3 id="modalTitle">Solicitud enviada</h3>
+      <p id="modalMsg">Gracias por tu interés. Te he enviado una copia por email.</p>
+      <div class="modal-actions">
+        <button id="modalClose" class="btn">Cerrar</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal privacidad (placeholder simple) -->
+  <dialog id="privacyModal">
+    <div class="modal-content">
+      <h3>Política de privacidad (resumen)</h3>
+      <p>Tratamos tus datos exclusivamente para elaborar y enviarte la cotización y, en su caso, gestionar tu solicitud de consultoría. No cedemos datos a terceros. Puedes ejercer tus derechos escribiendo a <em>tu-email@dominio.tld</em>.</p>
+      <div class="modal-actions">
+        <button id="privacyClose" class="btn">Cerrar</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
