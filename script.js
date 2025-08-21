@@ -6,7 +6,7 @@ const WHATS_NUMBER = "34681269931"; // <-- CAMBIA ESTO
 // 2) Configuración de EmailJS (https://www.emailjs.com/)
 const EMAILJS_PUBLIC_KEY = "Ar6EQuPosAibvMkUT";        // <-- CAMBIA ESTO
 const EMAILJS_SERVICE_ID = "service_qxqpwpk";        // <-- CAMBIA ESTO
-const EMAILJS_TEMPLATE_ID = "template_xlkrtcd";      // <-- CAMBIA ESTO
+const EMAILJS_TEMPLATE_ID = "template_7g4qjit";      // <-- CAMBIA ESTO
 
 /* ========= LÓGICA DE NEGOCIO =========
 Precios por endpoints:
