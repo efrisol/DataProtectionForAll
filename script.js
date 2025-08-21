@@ -1,12 +1,12 @@
 /* ========= PARÁMETROS A EDITAR ========= */
 
 // 1) Tu número de WhatsApp en formato internacional sin "+"
-const WHATS_NUMBER = "34123456789"; // <-- CAMBIA ESTO
+const WHATS_NUMBER = "34681269931"; // <-- CAMBIA ESTO
 
 // 2) Configuración de EmailJS (https://www.emailjs.com/)
-const EMAILJS_PUBLIC_KEY = "TU_PUBLIC_KEY";        // <-- CAMBIA ESTO
-const EMAILJS_SERVICE_ID = "TU_SERVICE_ID";        // <-- CAMBIA ESTO
-const EMAILJS_TEMPLATE_ID = "TU_TEMPLATE_ID";      // <-- CAMBIA ESTO
+const EMAILJS_PUBLIC_KEY = "Ar6EQuPosAibvMkUT";        // <-- CAMBIA ESTO
+const EMAILJS_SERVICE_ID = "service_qxqpwpk";        // <-- CAMBIA ESTO
+const EMAILJS_TEMPLATE_ID = "template_kosy606";      // <-- CAMBIA ESTO
 
 /* ========= LÓGICA DE NEGOCIO =========
 Precios por endpoints:
